@@ -1,0 +1,49 @@
+{
+  "New Functional Component": {
+    "prefix": "component",
+    "body": [
+      "import React, { FC } from 'react';",
+      "",
+      "export interface I${1:COMPONENT_NAME}Props {}",
+      "",
+      "const ${1:COMPONENT_NAME}: FC<I${1:COMPONENT_NAME}Props> = props => {",
+      "    return ${2: null}",
+      "}",
+      "",
+      "export default ${1:COMPONENT_NAME};"
+    ],
+    "description": "Create new tsx function component"
+  },
+  "New Context Provider": {
+    "prefix": "provider",
+    "body": [
+      "import React, { FC, createContext } from 'react';",
+      "",
+      "export interface I${1:PROVIDER_NAME}Context { }",
+      "",
+      "export interface I${1:PROVIDER_NAME}ProviderProps { }",
+      "",
+      "export const ${1:PROVIDER_NAME}Context = createContext({} as I${1:PROVIDER_NAME}Context);",
+      "",
+      "export const ${1:PROVIDER_NAME}Provider: FC<I${1:PROVIDER_NAME}ProviderProps> = props => {",
+      "  return <${1:PROVIDER_NAME}Context.Provider value={{ }}>{props.children}</${1:PROVIDER_NAME}Context.Provider>;",
+      "}"
+    ],
+    "description": "Create a new Context API proivder component"
+  },
+  "New Storybook Test": {
+    "prefix": "test",
+    "body": [
+      "import React from 'react';",
+      "import { storiesOf } from '@storybook/react';",
+      "import ${1:COMPONENT_NAME} from './index';",
+      "",
+      "storiesOf('Components|${1:COMPONENT_NAME}', module).add('default', () => {",
+      "  return (",
+      "    <${1:COMPONENT_NAME} />",
+      "  );",
+      "});"
+    ],
+    "description": "Create a new storybook test"
+  }
+}

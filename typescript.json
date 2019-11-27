@@ -1,0 +1,13 @@
+{
+  "translation file": {
+    "prefix": "translation",
+    "body": [
+      "import { createTranslateFunction } from '@outreach/hg/helpers/i18n';",
+      "",
+      "const strings = {${1}};",
+      "",
+      "export default createTranslateFunction(strings);"
+    ],
+    "description": "Create new strings.ts file"
+  }
+}
